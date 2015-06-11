@@ -20,7 +20,43 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Get a signing key
+
+```
+signature = ParamSigner::Signer.sign({
+  foo: 'bar',
+  asdf: 'qwer'
+}, my_secret)
+```
+
+Or, you can create an instance to reuse:
+
+```
+signer = ParamSigner::Signer.new(my_secret)
+signature = signer.sign({
+  foo: 'bar',
+  asdf: 'qwer'
+})
+
+```
+
+### Verify a signing key
+
+```
+ParamSigner::Signer.valid?({
+  foo: 'bar',
+  asdf: 'qwer'
+}, my_secret, signature)
+```
+Or, you can create an instance to reuse:
+
+```
+signer = ParamSigner::Signer.new(my_secret)
+is_valid = signer.valid?({
+  foo: 'bar',
+  asdf: 'qwer'
+}, signature)
+```
 
 ## Contributing
 
