@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jching@avvo.com"]
   spec.summary       = %q{Generate signatures based on a secret key}
   spec.description   = %q{Generate signatures based on a secret key}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/avvo/param_signer"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
