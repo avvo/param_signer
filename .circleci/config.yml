@@ -1,0 +1,22 @@
+---
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      # Clean up .gem files from all previous builds
+      - run: rm -f *.gem
+      - run: gem install package_cloud
+      - run: gem build $(ls *.gemspec)
+      - run: package_cloud push avvo/gems $(ls *.gem)
+workflows:
+  version: 2
+  build-workflow:
+    jobs:
+      - build:
+          context: org-global
+          filters:
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*/
