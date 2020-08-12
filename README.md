@@ -4,19 +4,15 @@ Sign params with a shared secret
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install ParamSigner from the command line:
 
-```ruby
-gem 'param_signer'
-```
+    $ gem install param_signer --source https://avvo-gems.public.artifactory.internetbrands.com
 
-And then execute:
+or within a Gemfile:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install param_signer
+    source 'https://avvo-gems.public.artifactory.internetbrands.com' do
+      gem 'param_signer'
+    end
 
 ## Usage
 
@@ -65,3 +61,4 @@ is_valid = signer.valid?({
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+To push new versions of this gem to the Avvo Artifactory repo, a git commit will need to have a tag with a version number (e.g. v0.2.9). When a commit is pushed to Github with a version tag, this will trigger a CircleCI job that will build the gem, run any tests, and push the new gem version to Avvo Artifactory repo.
