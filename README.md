@@ -4,19 +4,15 @@ Sign params with a shared secret
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install ParamSigner from the command line:
 
-```ruby
-gem 'param_signer'
-```
+    $ gem install param_signer --source https://avvo-gems.public.artifactory.internetbrands.com
 
-And then execute:
+or within a Gemfile:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install param_signer
+    source 'https://avvo-gems.public.artifactory.internetbrands.com' do
+      gem 'param_signer'
+    end
 
 ## Usage
 
