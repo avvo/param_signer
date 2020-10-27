@@ -6,8 +6,8 @@ require 'param_signer/version'
 Gem::Specification.new do |spec|
   spec.name          = "param_signer"
   spec.version       = ParamSigner::VERSION
-  spec.authors       = ["Jeff Ching"]
-  spec.email         = ["jching@avvo.com"]
+  spec.author        = "Infrastructure team"
+  spec.email         = "Infrastructure@avvo.com"
   spec.summary       = %q{Generate signatures based on a secret key}
   spec.description   = %q{Generate signatures based on a secret key}
   spec.homepage      = "https://github.com/avvo/param_signer"
@@ -18,6 +18,6 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.7"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "bundler", "~> 1.17.3"
+  spec.add_development_dependency "rake", "~> 12.3.3"
 end
